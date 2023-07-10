@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalStateService } from '../../services/global-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +11,8 @@ export class LayoutComponent implements OnInit {
   menuIsOpen!: any;
 
   constructor(
-    private state: GlobalStateService
+    private state: GlobalStateService,
+    private _router: Router
   ) {
     this.menuIsOpen = this.state.getMenuIsOpen()
   }
@@ -31,5 +33,10 @@ export class LayoutComponent implements OnInit {
         this.state.setMenuIsOpen(false)
       }
     }
+  }
+
+  logoClick() {
+    this.state.setMenuIsOpen(false)
+    this._router.navigateByUrl("")
   }
 }

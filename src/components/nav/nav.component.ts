@@ -26,4 +26,9 @@ export class NavComponent {
     this._router.navigateByUrl(str !== "home" ? str : "")
     this.state.setMenuIsOpen(false)
   }
+
+  logoClick() {
+    this.state.setMenuIsOpen(false)
+    this._router.navigateByUrl("")
+  }
 }
