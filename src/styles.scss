@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+$purple: #1D1042;
+$lightPurple: #703EFE;
+$greyText: #1a1b1c;
+$grey: #7D8088;
+$green: #8BC488;
+$orange: #FB5F37;
+$lightOrange: #F89D4B;
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background: #22262F;
+    backdrop-filter: blur(20px);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 0;
+    margin: 0;
+}

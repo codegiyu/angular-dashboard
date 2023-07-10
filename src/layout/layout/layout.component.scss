@@ -1,0 +1,95 @@
+@use "../../styles.scss";
+
+header {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    display: none;
+    position: relative;
+    box-shadow: 0px 4px 148px rgba(0, 0, 0, 0.02);
+
+    & .header-wrap {
+        width: 100%;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .logo {
+            width: max-content;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            & img {
+                width: 30px;
+            }
+
+            & p {
+                font-size: 24px;
+                line-height: 100%;
+                font-weight: 600;
+                color: white;
+            }
+        }
+
+        & button {
+            background: transparent;
+            border: none;
+            outline: none;
+
+            & img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+
+    & .nav-modal {
+        width: 100%;
+        height: 100vh;
+        background: #00000099;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        transform: translateX(-101vw);
+
+        &.menu-open {
+            transform: translateX(0);
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        display: flex;
+        margin-top: 15px;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    align-items: stretch;
+
+    & aside {
+        width: 100%;
+        height: 100%;
+    }
+
+    & .main-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        height: calc(100% - 60px);
+        grid-template-columns: 1fr;
+
+        & aside {
+            display: none;
+        }
+    }   
+}

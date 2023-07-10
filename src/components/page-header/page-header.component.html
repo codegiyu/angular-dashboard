@@ -1,0 +1,17 @@
+<section class="page-header-section">
+    <div class="title-wrap">
+        <h1>{{title}}</h1>
+        <p>{{intro}}</p>
+    </div>
+    <form [formGroup]="searchForm" (ngSubmit)="searchApp()" novalidate>
+        <input 
+            type="text" 
+            formControlName="search"
+            placeholder="Can't find something? Search here"
+            required
+        />
+        <button type="submit" [disabled]="searchForm.invalid">
+            <img src="../../assets/img/search-normal.svg" alt="">
+        </button>
+    </form>
+</section>

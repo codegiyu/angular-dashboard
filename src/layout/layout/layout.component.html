@@ -1,0 +1,28 @@
+<header>
+    <section class="header-wrap">
+        <div class="logo">
+            <img src="../../assets/img/logo.svg" alt="">
+            <p>D-App</p>
+        </div>
+        <button (click)="handleOpenMenu()">
+            <img src="../../assets/img/dashboard.svg" alt="" />
+        </button>
+    </section>
+
+    <section 
+        (click)="handleClickOutsideMenu($event)" 
+        [ngClass]="{ 'nav-modal': true, 'menu-open': menuIsOpen.source._value }"
+    >
+        <app-nav></app-nav>
+    </section>
+</header>
+
+<main>
+    <aside>
+        <app-nav></app-nav>
+    </aside>
+
+    <section class="main-content">
+        <ng-content></ng-content>
+    </section>
+</main>

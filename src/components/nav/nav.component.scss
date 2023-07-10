@@ -1,0 +1,113 @@
+@use "../../styles.scss";
+
+.mobile-nav-wrap {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: white;
+
+    & .aside-top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        & .menu-close-line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 70px 32px 20px 40px;
+
+            & .logo {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+    
+                & img {
+                    width: 30px;
+                }
+
+                & p {
+                    font-size: 24px;
+                    line-height: 100%;
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+
+            & button {
+                background: transparent;
+                border: none;
+                outline: none;
+                display: none;
+    
+                & img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        & .links {
+            width: 220px;
+            
+
+            & ul {
+                width: 100%;
+                display: grid;
+                gap: 15px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                & li {
+                    width: 100%;
+                    border-radius: 16px;
+                    opacity: 0.4;
+
+                    & div {
+                        width: 100%;
+                        padding: 16px 10px 16px 40px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        & img {
+                            width: 24px;
+                        }
+
+                        & p {
+                            font-size: 16px;
+                            line-height: 100%;
+                            color: white;
+                        }
+                    }
+                }
+
+                & li.active, & li:hover {
+                    opacity: 1;
+                    background: linear-gradient(268deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0.00) 100%);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        width: 300px;
+        background: #232731;
+        box-shadow: 0px 4px 148px rgba(0, 0, 0, 0.02);
+
+        & .aside-top {
+
+            & .menu-close-line {
+                display: flex;
+                padding: 20px 32px 20px 40px;
+
+                & button {
+                    display: block;
+                }
+            }
+        }
+    }
+}

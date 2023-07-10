@@ -1,0 +1,33 @@
+<app-layout>
+    <app-page-header 
+        [title]="'Dashboard'" 
+        [intro]="'See your overview here'"
+    ></app-page-header>
+    <section class="main-content">
+        <section class="hero-section">
+            <div class="hero-section-wrap">
+                <div class="hero-main">
+                    <h2>Special premium account!</h2>
+                    <p>
+                        With a special premium account, you can do very interesting things!
+                        By purchasing this account, special features will be activated 
+                        for you that you will be amazed to see!
+                    </p>
+                    <div class="hero-btns">
+                        <app-hero-btn 
+                            [btnText]="'Account purchase'" 
+                            [imgSrc]="'../../assets/img/shopping-cart.svg'"
+                        ></app-hero-btn>
+                        <app-hero-btn 
+                            [btnText]="'View features'" 
+                            [imgSrc]="'../../assets/img/flash.svg'"
+                        ></app-hero-btn>
+                    </div>
+                </div>
+                <div class="hero-img-wrap">
+                    <img src="../../assets/img/hero.svg" alt="" class="hero-img">
+                </div>
+            </div>
+        </section>
+    </section>
+</app-layout>
